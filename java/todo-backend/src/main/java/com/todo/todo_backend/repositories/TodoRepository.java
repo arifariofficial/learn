@@ -1,2 +1,8 @@
-package com.todo.todo_backend.repositories;public interface TodoRepository {
+package com.todo.todo_backend.repositories;
+import com.todo.todo_backend.models.Todo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface TodoRepository extends JpaRepository<Todo, Long> {
 }
