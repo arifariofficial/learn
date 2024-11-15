@@ -1,4 +1,12 @@
 node_modules/
 .venv/
 
+
+# java intelliJ IDEA
+.idea/
+*.iml
+out/
+
+*.class
+
 .env
