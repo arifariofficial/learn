@@ -5,3 +5,12 @@ Select a number (1-3): 1
 You selected one.
 
 """
+
+num = int(input("Select a number (1-3): "))
+
+if num == 1:
+    print("You slected one.")
+elif num == 2:
+    print("You slected two.")
+elif num == 3:
+    print("You slected three.")
