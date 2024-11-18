@@ -1,40 +1,192 @@
+# General
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node.js (JavaScript/TypeScript, React, Next.js, Vue, Angular, React Native)
 node_modules/
-.venv/
-
-
+dist/
+build/
+.npm/
+.yarn/
+.pnpm-debug.log*
+.eslintcache
+.prettiercache
 .env
+.env.local
+.env.*.local
+.next/
+out/
+public/static/
 
-# java intelliJ IDEA
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Python (Django, Flask)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+*.sqlite3
+*.db
+*.h5
+*.egg-info/
+.eggs/
+build/
+dist/
+htmlcov/
+.coverage
+.tox/
+.mypy_cache/
+.pytest_cache/
+*.pytest_cache
+*.cache
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# Java (Spring Boot, Android Developer, Kotlin)
+*.class
+*.jar
+*.war
+*.ear
 *.iml
 *.ipr
+*.iws
+target/
+.gradle/
+.build/
+*.project
+*.classpath
+.settings/
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+dependency-reduced-pom.xml
+rebuild-release.properties
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# C/C++/C# (Qt, CLion)
+*.obj
+*.o
+*.dll
+*.exe
+*.out
+*.so
+*.a
+*.dylib
+*.class
+*.pdb
+*.userprefs
+*.suo
+*.sln
+*.nupkg
+*.vcxproj
+*.vcxproj.user
+.vscode/settings.json
+
+# Dart (Flutter)
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-version
+.idea/
+android/
+ios/
+web/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+windows/
+macos/
+linux/
 
-### VS Code ###
+# Swift and Xcode
+*.xcworkspace
+*.xcuserstate
+*.xcodeproj/
+DerivedData/
+build/
+*.hmap
+*.ipa
+*.dSYM/
+*.xcuserdata/
+
+# VSCode
 .vscode/
+*.code-workspace
+
+# IntelliJ/CLion
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Qt
+*.moc
+*.qrc
+*.qmlc
+*.qrc.dep
+*.ts
+*.qm
+*.pro.user
+*.obj
+*.o
+Makefile
+Makefile.*
+*.layout
+
+# React Native
+*.keystore
+android/.gradle
+android/app/build/
+android/app/src/debug/
+android/app/src/release/
+ios/Pods/
+ios/build/
+ios/*.xcodeproj/
+ios/*.xcworkspace/
+
+# Angular
+.angular/
+.angular-cache/
+
+# Vue.js
+node_modules/
+dist/
+build/
+*.local
+
+# Spring Boot
+target/
+*.log
+
+# Django
+*.pyc
+*.pyo
+db.sqlite3
+__pycache__/
+
+# Flask
+*.pyc
+*.pyo
+instance/
+*.sqlite3
+
+# Android Studio
+.idea/
+build/
+*.apk
+*.keystore
+*.jks
+.cxx/
+local.properties
+.gradle/
+
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.dart_tool/
+build/
