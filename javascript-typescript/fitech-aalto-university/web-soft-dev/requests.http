@@ -1,0 +1,19 @@
+curl http://localhost:8000
+
+###
+curl -X POST http://localhost:8000
+
+###
+curl "http://localhost:8000?name=Harry"
+
+###
+curl "http://localhost:8000?one=1&two=2"
+
+###
+curl "http://localhost:8000?page=2&count="
+
+###
+curl "http://localhost:8000?operation=product&number1=2&number2=5"
+
+###
+curl "http://localhost:8000?title=hero&name=Buffy"

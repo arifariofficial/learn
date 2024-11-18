@@ -1,0 +1,59 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Next.js build output
+.next/
+
+# Static files output (for exported apps)
+out/
+
+# Typescript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# MacOS specific
+.DS_Store
+
+# Env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Docker specific
+docker-compose.override.yml
+.dockerignore
+
+# Coverage directories (if you're using a testing tool like Jest)
+coverage/
+
+# Vercel/Now specific
+.vercel/
+.now/
+
+# Storybook
+storybook-static/
+
+# IntelliJ / WebStorm settings
+.idea/
+
+# VSCode settings
+.vscode/
+
+# Package lock files
+# Uncomment if you want to ignore package-lock.json or yarn.lock files (not recommended)
+# package-lock.json
+# yarn.lock

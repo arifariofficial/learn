@@ -1,0 +1,3 @@
+/Users/ari/Desktop/c/cmake-build-debug/CMakeFiles/c.dir
+/Users/ari/Desktop/c/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ari/Desktop/c/cmake-build-debug/CMakeFiles/rebuild_cache.dir

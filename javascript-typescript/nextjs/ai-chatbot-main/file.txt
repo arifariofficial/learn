@@ -1,0 +1,18 @@
+           <Tooltip>
+                <TooltipTrigger asChild className="absolute left-6">
+                  <Button
+                    variant="ghost"
+                    onClick={() => handleCopyText(content)}
+                    className="ml-1 mt-1"
+                  >
+                    {!copyIcon ? (
+                      <CopyIcon className="text-gray-400 hover:text-gray-900" />
+                    ) : (
+                      <TickIcon className="text-gray-400" />
+                    )}
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent side="bottom">
+                  <p>Copy</p>
+                </TooltipContent>
+              </Tooltip>
