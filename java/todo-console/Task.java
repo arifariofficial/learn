@@ -1,27 +1,2 @@
-public class Task {
-    private final  String  description;
-    private   boolean  isCompleted;
-
-    public Task(String description) {
-        this.description = description;
-        this.isCompleted = false;
-    }
-
-    public String getDescription () {
-        return description;
-    }
-
-    public boolean isCompleted() {
-        return  isCompleted;
-    }
-
-    public void markAsCompleted() {
-        isCompleted = true;
-    }
-
-
-    @Override
-    public String toString() {
-        return (isCompleted ? "[isCompleted] " : "[Pending] ") + description;
-    }
+package PACKAGE_NAME;public class Task {
 }
