@@ -11,7 +11,7 @@ public class TodoAppTest {
         // Lisätään tehtävä
         app.addTask("Tehtävä 1", "Kuvaus 1", "Kategoria 1");
         // Testataan, että tehtävä on lisätty
-        assertEquals(1, app.listAllTasks().size());
+        assertTrue(app.listAllTasks().contains("Tehtävä 1: Kuvaus 1 - Kategoria 1"));
     }
 
     @Test
@@ -19,16 +19,18 @@ public class TodoAppTest {
         // Lisätään tehtävä
         app.addTask("Tehtävä 2", "Kuvaus 2", "Kategoria 2");
         // Testataan, että kaikki tehtävät näytetään oikein
-        assertEquals("Tehtävä 2: Kuvaus 2 - Kategoria 2\n", app.listAllTasks().get(0));
+        assertTrue(app.listAllTasks().contains("Tehtävä 2: Kuvaus 2 - Kategoria 2"));
     }
 
     @Test
     public void testListTasksByCategory() {
-        // Lisätään tehtävä
+        // Lisätään tehtävät
         app.addTask("Tehtävä 3", "Kuvaus 3", "Kategoria 3");
         app.addTask("Tehtävä 4", "Kuvaus 4", "Kategoria 3");
         // Testataan, että tehtävät suodatetaan oikein kategorian mukaan
-        assertEquals("Tehtävä 3: Kuvaus 3 - Kategoria 3\nTehtävä 4: Kuvaus 4 - Kategoria 3\n", app.listTasksByCategory("Kategoria 3"));
+        String result = app.listTasksByCategory("Kategoria 3");
+        assertTrue(result.contains("Tehtävä 3: Kuvaus 3 - Kategoria 3"));
+        assertTrue(result.contains("Tehtävä 4: Kuvaus 4 - Kategoria 3"));
     }
 
     @Test
@@ -38,7 +40,7 @@ public class TodoAppTest {
         // Merkitään tehtävä suorituksiin
         app.markTaskAsCompleted("Tehtävä 5");
         // Testataan, että tehtävän tila on muutettu oikein
-        assertEquals("Tehtävä 5: Kuvaus 5 - Kategoria 5 (Valmis)\n", app.listAllTasks().get(0));
+        assertTrue(app.listAllTasks().contains("Tehtävä 5: Kuvaus 5 - Kategoria 5 (Valmis)"));
     }
 
     @Test
@@ -49,6 +51,6 @@ public class TodoAppTest {
         // Merkitään tehtävä uudelleen kesken olevaksi
         app.markTaskAsIncomplete("Tehtävä 6");
         // Testataan, että tehtävän tila on muutettu oikein
-        assertEquals("Tehtävä 6: Kuvaus 6 - Kategoria 6\n", app.listAllTasks().get(0));
+        assertTrue(app.listAllTasks().contains("Tehtävä 6: Kuvaus 6 - Kategoria 6"));
     }
 }

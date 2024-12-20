@@ -1,103 +1,72 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class ToDoApp {
-    private final Scanner scanner;
-    private final ArrayList<Task> tasks;
+public class TodoApp {
+    private List<Task> tasks;
 
-    public ToDoApp() {
-        tasks = new ArrayList<>();
-        scanner = new Scanner(System.in);
+    // Constructor
+    public TodoApp() {
+        this.tasks = new ArrayList<>();
     }
 
-    public static void main(String[] args) {
-        ToDoApp app = new ToDoApp();
-        app.start();
+    // Method to add a task
+    public void addTask(String name, String description, String category) {
+        Task task = new Task(name, description, category);
+        tasks.add(task);
+        System.out.println("Task added: " + task);
     }
 
-    public void start() {
-        System.out.println("Welcome to the To-Do App!");
+    // Method to list all tasks
+// Method to list all tasks
+    public List<String> listAllTasks() {
+        if (tasks.isEmpty()) {
+            System.out.println("No tasks available.");
+            return new ArrayList<>();  // Return an empty list if no tasks
+        } else {
+            return tasks.stream()
+                    .map(Task::toString)  // Convert each Task object to a String representation
+                    .collect(Collectors.toList());
+        }
+    }
 
-        while (true) {
-            System.out.println("\nChoose an option:");
-            System.out.println("1. Add a task");
-            System.out.println("2. View tasks");
-            System.out.println("3. Mark a task as completed");
-            System.out.println("4. Delete a task");
-            System.out.println("5. Exit");
+    // Method to list tasks by category
+    public List<String> listTasksByCategory(String category) {
+        List<Task> filteredTasks = tasks.stream()
+                .filter(task -> task.getCategory().equalsIgnoreCase(category))
+                .collect(Collectors.toList());
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+        if (filteredTasks.isEmpty()) {
+            System.out.println("No tasks in this category.");
+            return new ArrayList<>();  // Return an empty list if no tasks found
+        } else {
+            return filteredTasks.stream()
+                    .map(Task::toString)  // Convert each filtered Task to String
+                    .collect(Collectors.toList());
+        }
+    }
 
-            switch (choice) {
-                case 1:
-                    addTask();
-                    break;
-                case 2:
-                    viewTasks();
-                    break;
-                case 3:
-                    markTaskCompleted();
-                    break;
-                case 4:
-                    deleteTask();
-                    break;
-                case 5:
-                    System.out.println("Goodbye!");
-                    System.exit(0);
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+    // Method to mark a task as completed by task name
+    public void markTaskAsCompleted(String taskName) {
+        for (Task task : tasks) {
+            if (task.getName().equalsIgnoreCase(taskName) && !task.isCompleted()) {
+                task.markCompleted();
+                System.out.println("Task marked as completed: " + task);
+                return;
             }
         }
+        System.out.println("Task not found or already completed.");
     }
 
-    private void addTask() {
-        System.out.print("Enter a task description: ");
-        String description = scanner.nextLine();
-
-        Task task = new Task(description);
-        tasks.add(task);
-        System.out.println("Task added successfully.");
-    }
-
-    private void viewTasks() {
-        if (tasks.isEmpty()) {
-            System.out.println("No tasks found.");
-            return;
-        }
-
-        System.out.println("\nTasks:");
+    // Method to mark a task as incomplete by task name
+    public void markTaskAsIncomplete(String taskName) {
         for (Task task : tasks) {
-            System.out.println(task);
+            if (task.getName().equalsIgnoreCase(taskName) && task.isCompleted()) {
+                task.markIncomplete();
+                System.out.println("Task marked as incomplete: " + task);
+                return;
+            }
         }
-    }
-
-    private void markTaskCompleted() {
-        System.out.print("Enter the task number to mark as completed: ");
-        int taskNumber = scanner.nextInt();
-        scanner.nextLine();
-
-        if (taskNumber <= 0 || taskNumber > tasks.size()) {
-            System.out.println("Invalid task number. Please try again.");
-            return;
-        }
-
-        Task task = tasks.get(taskNumber - 1);
-        task.markAsCompleted();
-        System.out.println("Task marked as completed.");
-    }
-
-    private void deleteTask() {
-        System.out.print("Enter the task number to delete: ");
-        int taskNumber = scanner.nextInt();
-        scanner.nextLine();
-
-        if (taskNumber <= 0 || taskNumber > tasks.size()) {
-            System.out.println("Invalid task number. Please try again.");
-            return;
-        }
-
-        tasks.remove(taskNumber - 1);
-        System.out.println("Task deleted successfully.");
+        System.out.println("Task not found or already incomplete.");
     }
 }

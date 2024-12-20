@@ -1,0 +1,6 @@
+# ninja log v6
+7	612	1734498756999119974	CMakeFiles/c__.dir/main.cpp.o	270cd7033975f62e
+612	743	1734498757604356423	c__	a8bc8035c6649f1e
+24	739	1734494922217610593	CMakeFiles/c__.dir/FileManager.cpp.o	a7a6fb0c9277050f
+23	745	1734494922216911254	CMakeFiles/c__.dir/todo.cpp.o	680cfae70f4371f1
+24	751	1734494922217426103	CMakeFiles/c__.dir/TodoManager.cpp.o	67e45e19f584b8ae
