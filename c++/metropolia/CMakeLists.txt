@@ -7,7 +7,7 @@ add_executable(metropolia
                 test/main.cpp
         #        test/Time.h
         #        test/Time.cpp
-        #        lab-01.cpp
+                lab-01.cpp
         #        lab-02a.cpp
         #        lab-02b.cpp
         #        lab-03a.cpp

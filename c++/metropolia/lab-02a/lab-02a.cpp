@@ -43,14 +43,6 @@ int main() {
         line.erase();
     }
 
-    // Now page is a string that contains the whole xml page
-
-    // Here you need to write something that finds and
-    // extracts location and temperature from the XML
-    // data in the string page and stores them in
-    // the strings location and temperature respectively
-
-    // Extract location and temperature information
     location = find_field(page, "location");
     temperature = find_field(page, "temp_c");
 
@@ -62,10 +54,7 @@ int main() {
 }
 
 string find_field(const string &xml, const string &tag_name) {
-    // construct start and end tags from the tag name
-    // add angle brackets to both tags and also slash to end tag
-    // then search for tags
-    // if both are found then return the substring between the tags
+
     const string start_tag = "<" + tag_name + ">";
     const string end_tag = "</" + tag_name + ">";
 

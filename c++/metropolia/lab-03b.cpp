@@ -26,39 +26,37 @@ bca
 #include <vector>
 #include <algorithm>
 
-using namespace std;
-
 // Function to reverse individual strings and then sort in descending order
-void backwards(vector<string> &vec) {
+void backwards(std::vector<std::string> &vec) {
     // Reverse each individual string
     for (auto &s: vec) {
-        ranges::reverse(s);
+        std::ranges::reverse(s);
     }
 
     // Sort the vector in descending order
-    ranges::sort(vec, greater<>()); // Use transparent functor with ranges
+    std::ranges::sort(vec, std::greater<>()); // Use transparent functor with ranges
 }
 
 int main() {
-    vector<string> strings;
-    string input;
+    std::vector<std::string> strings;
+    std::string input;
 
-    cout << "Enter strings (or 'stop' to end): ";
-    while (cin >> input && input != "stop") {
+    std::cout << "Enter strings (or 'stop' to end): ";
+    while (std::cin >> input && input != "stop") {
         strings.push_back(input);
-        cout << "Enter strings (or 'stop' to end): ";
+        std::cout << "Enter strings (or 'stop' to end): ";
     }
 
-    cout << "Original content of the vector:" << endl;
+    std::cout << "Original content of the vector:" << std::endl;
     for (const auto &s: strings) {
-        cout << s << endl;
+        std::cout << s << std::endl;
     }
 
     backwards(strings);
 
-    cout << "Content of the vector after calling backwards:" << endl;
+    std::cout << "Content of the vector after calling backwards:" << std::endl;
     for (const auto &s: strings) {
-        cout << s << endl;
+        std::cout << s << std::endl;
     }
 
     return 0;
