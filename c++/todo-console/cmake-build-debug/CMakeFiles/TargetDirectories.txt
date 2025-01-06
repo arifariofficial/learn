@@ -1,0 +1,3 @@
+/Users/ari/Desktop/learn/c++/todo-console/cmake-build-debug/CMakeFiles/todo_console.dir
+/Users/ari/Desktop/learn/c++/todo-console/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ari/Desktop/learn/c++/todo-console/cmake-build-debug/CMakeFiles/rebuild_cache.dir

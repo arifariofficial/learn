@@ -1,0 +1,16 @@
+# ninja log v6
+7	654	1735390345803303023	CMakeFiles/todo_console.dir/main.cpp.o	1609fe3f66ee3ae4
+673	795	1735390346469474267	todo_console	6a47933dc8ddd292
+9	673	1735390345805161142	CMakeFiles/todo_console.dir/src/TehtavaLista.cpp.o	29d94c9c7f3cc291
+8	696	1735389746724123085	CMakeFiles/todo_console.dir/src/Tehtava.cpp.o	c64873d0a67f7054
+25	655	1735391905412085514	CMakeFiles/todo_console.dir/src/Tehtava.cpp.o	ba4569e8b2aa8335
+24	964	1735391905410745119	CMakeFiles/todo_console.dir/main.cpp.o	e95d6f56c666dd61
+25	1342	1735391905412246798	CMakeFiles/todo_console.dir/src/TehtavaLista.cpp.o	aed752b9b7a95c40
+23	963	1735392265314338271	CMakeFiles/todo_console.dir/main.cpp.o	e95d6f56c666dd61
+25	978	1735392265315351182	CMakeFiles/todo_console.dir/src/TehtavaLista.cpp.o	aed752b9b7a95c40
+978	1100	1735392266268920936	todo_console	6a47933dc8ddd292
+6	916	1735392422662602305	CMakeFiles/todo_console.dir/main.cpp.o	e95d6f56c666dd61
+7	1290	1735392422663353312	CMakeFiles/todo_console.dir/src/TehtavaLista.cpp.o	aed752b9b7a95c40
+1290	1415	1735392423946305025	todo_console	6a47933dc8ddd292
+46	1363	1735485606328656407	CMakeFiles/todo_console.dir/src/TehtavaLista.cpp.o	aed752b9b7a95c40
+1364	1505	1735485607646342144	todo_console	6a47933dc8ddd292

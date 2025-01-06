@@ -1,0 +1,6 @@
+# ninja log v6
+11	782	1735212439361502427	CMakeFiles/bug_fixing.dir/main.cpp.o	feb50c849ea4ea99
+782	919	1735212440132620229	bug_fixing	31d8e1d8af185557
+1	648	1735216714826427999	CMakeFiles/bug_fixing.dir/main1_res_2_fixed.cpp.o	ac8df95e21d2d4ca
+7	1014	1735216788162305781	CMakeFiles/bug_fixing.dir/main1_res_2_fixed.cpp.o	ac8df95e21d2d4ca
+1014	1156	1735216789169246435	bug_fixing	3966061e16205df0
